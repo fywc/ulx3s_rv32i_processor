@@ -22,6 +22,7 @@ function Word alu(Word a, Word b, AluFunc func);
 	Word res = case (func)
 		Add:    (a + b);
 		Sub:    (a - b);
+		Mul:    (a * b);
 		And:    (a & b);
 		Or:     (a | b);
 		Xor:    (a ^ b);

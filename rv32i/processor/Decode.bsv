@@ -103,7 +103,9 @@ function DecodedInst decode(Bit#(32) inst);
 				endcase
 			end
 			else if (funct7 == 7'b0000001) begin
-				//case (funct3)
+				case (funct3)
+					fnMUL: dInst = DecodedInst { dst: dst, writeDst: True, src1: src1, src2:src2, imm: ?, brFunc: ?, aluFunc: Mul, iType: OP, size: ?, extendSigned: ? };
+				endcase
 				// case fnMUL: 
 				//endcase
 			end
